@@ -21,7 +21,7 @@
 3) Run the script and follow the prompts during the execution  
 ```./auto-setup-ssh-key-mfa.sh```
 
-Before closing the original session please ensure you can access the system by trying the new login in a new session.  
+**Before closing the original session please ensure you can access the system by trying the new login in a new session.**
 
 ## Rollback
 If you face any issue and wish to rollback the changes, you can replace the newly created config file with the backups files that the scripts automatically create.  
