@@ -36,6 +36,7 @@ AUTHORIZED_KEYS="$USER_SSH_DIR/authorized_keys"
 
 mkdir -p "$USER_SSH_DIR"
 echo "$PUBLIC_KEY" >> "$AUTHORIZED_KEYS"
+cp "${USER_SSH_DIR}/authorized_keys" "${USER_SSH_DIR}/authorized_keys.bck"
 chown -R "$INSTALL_USER:$INSTALL_USER" "$USER_SSH_DIR"
 chmod 700 "$USER_SSH_DIR"
 chmod 600 "$AUTHORIZED_KEYS"
@@ -94,4 +95,8 @@ fi
 ### 7. End
 echo "[✓] SSH with key and password+MFA fallback setup complete!"
 echo "Please test the connection in a new session before closing this one."
+echo "If you face any isse and wish to rollback the changes you can replace the newly created config files with their backup, the backup files have been created at the following locations:"
+echo "- ${USER_SSH_DIR}/authorized_keys.bck"
+echo "- ${SSHD_CONFIG}.bak"
+echo "- ${PAM_SSHD_CONFIG}.bak"
 echo "Bye Bye :)"
