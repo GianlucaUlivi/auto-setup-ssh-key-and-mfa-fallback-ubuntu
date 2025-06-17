@@ -3,7 +3,7 @@
 set -e
 
 echo "=== SSH Public Key and Password+MFA Fallback Setup ==="
-ehco "Please report any issue at https://github.com/GianlucaUlivi/auto-setup-ssh-key-and-mfa-fallback-ubuntu"
+echo "Please report any issue at https://github.com/GianlucaUlivi/auto-setup-ssh-key-and-mfa-fallback-ubuntu"
 
 ### 0. Setup
 # Get the User
