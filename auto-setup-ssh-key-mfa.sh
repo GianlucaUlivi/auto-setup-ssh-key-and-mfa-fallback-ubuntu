@@ -7,7 +7,9 @@ echo "Please report any issue at https://github.com/GianlucaUlivi/auto-setup-ssh
 
 ### 0. Setup
 # Get the User
-read -rp "Enter the username to configure SSH for: " INSTALL_USER
+current_user=$(whoami)
+read -rp "Enter the username to configure SSH for [${current_user}]: " INSTALL_USER
+INSTALL_USER=${INSTALL_USER:-$current_user}
 
 # Get the public key via editor
 read -p "Press Enter to open the editor and insert your public key(s)."
